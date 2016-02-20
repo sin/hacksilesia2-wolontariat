@@ -94,38 +94,7 @@ angular.module('starter.services', ['ngResource'])
   })
 
   .factory('Users', function ($resource) {
-    // Might use a resource here that returns a JSON array
-
-    // Some fake testing data
-    var users = [{
-      id: 0,
-      name: 'Mateusz',
-      surname: 'Sienkan',
-      email: 'mateusz@sienkan.pl',
-      about: 'Lorem ipsum.',
-      photo: 'img/adam.jpg'
-    }, {
-      id: 1,
-      name: 'Ktoś',
-      surname: 'Tam',
-      email: 'example@example.com',
-      about: 'Lorem ipsum.',
-      photo: 'img/max.png'
-    }];
-
-    return {
-      query: function () {
-        return users;
-      },
-      get: function (userId) {
-        for (var i = 0; i < users.length; i++) {
-          if (users[i].id === parseInt(userId)) {
-            return users[i];
-          }
-        }
-        return null;
-      }
-    };
+    return $resource('http://192.168.1.118:8000/user/:id');
   })
 
   .factory('Categories', function ($resource) {
