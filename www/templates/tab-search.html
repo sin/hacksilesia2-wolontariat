@@ -1,0 +1,16 @@
+<ion-view view-title="Searches">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="search in searches" type="item-text-wrap" href="#/tab/search/{{search.id}}">
+        <img ng-src="{{search.face}}">
+        <h2>{{search.name}}</h2>
+        <p>{{search.lastText}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(search)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

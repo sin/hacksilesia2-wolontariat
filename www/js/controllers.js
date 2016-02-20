@@ -1,28 +1,32 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
+  .controller('FeedCtrl', function ($scope) {
+  })
 
-.controller('ChatsCtrl', function($scope, Chats) {
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
+  .controller('AddCtrl', function ($scope) {
+  })
 
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
-  };
-})
+  .controller('SearchCtrl', function ($scope, Searches) {
+    // With the new view caching in Ionic, Controllers are only called
+    // when they are recreated or on app start, instead of every page change.
+    // To listen for when this page is active (for example, to refresh data),
+    // listen for the $ionicView.enter event:
+    //
+    //$scope.$on('$ionicView.enter', function(e) {
+    //});
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
-})
+    $scope.searches = Searches.all();
 
-.controller('AccountCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
-  };
-});
+  })
+
+  .controller('SearchDetailCtrl', function ($scope, $stateParams, Searches) {
+    $scope.search = Searches.get($stateParams.searchId);
+  })
+
+
+  .controller('ProfileCtrl', function ($scope, Users) {
+    $scope.user = Users.get(1);
+    $scope.settings = {
+      enableFriends: true
+    };
+  });
