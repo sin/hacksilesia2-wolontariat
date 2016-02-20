@@ -36,6 +36,6 @@ angular.module('starter.controllers', [])
 
   .controller('ProfileCtrl', function ($scope, Users) {
     $scope.$on('$ionicView.enter', function (e) {
-      $scope.user = Users.get(0);
+      $scope.user = Users.get({id: 1});
     });
   });

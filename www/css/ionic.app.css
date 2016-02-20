@@ -9754,6 +9754,19 @@ a.button {
     font-size: 16px;
     font-family: serif; }
 
+.header--alt {
+  height: 120px;
+  padding: 10px 0;
+  border-bottom: 2px solid #fff; }
+  .header--alt .header__userphoto {
+    height: 96px;
+    width: 96px;
+    margin-bottom: 15px; }
+  .header--alt .header__username {
+    line-height: 110px;
+    left: 110px;
+    font-size: 28px; }
+
 .feed {
   padding: 20px; }
   .feed__post {
@@ -9796,6 +9809,9 @@ a.button {
 .search__user {
   border-bottom: 2px solid #efbe17;
   margin-bottom: 15px; }
+
+.profile__top {
+  background: url("../img/profile_bg.png"); }
 
 .tab-item .icon:before {
   content: "";

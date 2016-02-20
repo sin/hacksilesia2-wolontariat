@@ -27,6 +27,24 @@
   }
 }
 
+.header--alt {
+  height: 120px;
+  padding: 10px 0;
+  border-bottom: 2px solid #fff;
+
+  .header__userphoto {
+    height: 96px;
+    width: 96px;
+    margin-bottom: 15px;
+  }
+
+  .header__username {
+    line-height: 110px;
+    left: 110px;
+    font-size: 28px;
+  }
+}
+
 .feed {
   padding: 20px;
 
@@ -72,7 +90,6 @@
 }
 
 .search {
-
   &__header {
     padding: 15px 12px;
     background: #efbe17 url('../img/bar_bottom.jpg');
@@ -89,6 +106,12 @@
   &__user {
     border-bottom: 2px solid #efbe17;
     margin-bottom: 15px;
+  }
+}
+
+.profile {
+  &__top {
+    background: url('../img/profile_bg.png');
   }
 }
 
