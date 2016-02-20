@@ -1,4 +1,4 @@
-.tabs-striped.tabs-energized .tabs {
+.tabs-energized .tabs {
   background: #efbe17 url('../img/bar_top.jpg');
 }
 
@@ -38,9 +38,9 @@
   }
 
   .header__username {
-    top: 40px;
+    margin-top: 15px;
+    margin-left: 110px;
     line-height: 30px;
-    left: 110px;
     font-size: 28px;
   }
 }
@@ -50,10 +50,10 @@
 
   &__photo {
     float: right;
-    width: 180px;
+    width: 150px;
 
     img {
-      max-width: 180px;
+      max-width: 150px;
     }
   }
 
@@ -111,6 +111,63 @@
   &__user {
     border-bottom: 2px solid #efbe17;
     margin-bottom: 15px;
+  }
+}
+
+.add {
+  &__title[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 2px solid #efbe17;
+  }
+
+  &__content {
+    width: 100%;
+    padding: 10px;
+  }
+
+  &__org {
+    background: #efbe17;
+    padding: 10px;
+    margin: 10px auto;
+  }
+
+  &__orgselect {
+    background: transparent;
+    border: 0;
+    width: 100%;
+  }
+
+  &__photozone {
+    margin: 30px auto;
+    width: 200px;
+    border: 1px solid #efbe17;
+    border-radius: 5px;
+  }
+
+  &__photo {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  &__addphoto {
+    color: #efbe17;
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    border-bottom: 1px solid #efbe17;
+    border-radius: 0;
+
+    &:first-child {
+      margin-top: 5px;
+    }
+
+    &:last-child {
+      border: 0;
+      margin-bottom: 5px;
+    }
   }
 }
 

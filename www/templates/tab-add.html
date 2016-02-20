@@ -1,7 +1,26 @@
 <ion-view view-title="Dodaj wolontariat" hide-nav-bar="true">
-  <ion-content>
-    <img ng-src="{{srcImage || 'img/adam.jpg'}}" id="srcImage" width="100%" style="display: block; margin: 0 auto;"/>
-    <button class="button button-full button-positive " ng-click="takeImage() ">Take Image</button><br/>
-
+  <ion-content class="padding">
+    <div class="add">
+      <div class="header">
+        <img class="header__userphoto" ng-src="{{user.avatar || 'img/adam.jpg'}}">
+        <h2 class="header__username">{{user.first_name}} {{user.last_name}}</h2>
+      </div>
+      <input class="add__title" type="text" name="Title" ng-model="post.title" placeholder="Tytuł">
+      <textarea class="add__content" name="Content" ng-model="post.content" placeholder="Treść"></textarea>
+      <div class="add__org">
+        <select class="add__orgselect" ng-model="post.organisation">
+          <option value="" selected disabled>Organizacja</option>
+          <option ng-repeat="org in organisations" value="{{org.id}}">{{org.name}}</option>
+        </select>
+      </div>
+      <div class="add__photozone">
+        <img class="add__photo" ng-show="srcImage" ng-src="{{srcImage}}">
+        <div ng-hide="srcImage">
+          <button class="button add__addphoto">Gallery</button>
+          <button class="button add__addphoto" ng-click="takeImage()">Camera</button>
+        </div>
+      </div>
+      <button class="button button-full button-energized" ng-click="save()">Dodaj</button>
+    </div>
   </ion-content>
 </ion-view>

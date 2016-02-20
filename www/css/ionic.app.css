@@ -9731,7 +9731,7 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
-.tabs-striped.tabs-energized .tabs {
+.tabs-energized .tabs {
   background: #efbe17 url("../img/bar_top.jpg"); }
 
 .header {
@@ -9762,18 +9762,18 @@ a.button {
     width: 96px;
     margin-bottom: 15px; }
   .header--alt .header__username {
-    top: 40px;
+    margin-top: 15px;
+    margin-left: 110px;
     line-height: 30px;
-    left: 110px;
     font-size: 28px; }
 
 .feed {
   padding: 20px; }
   .feed__photo {
     float: right;
-    width: 180px; }
+    width: 150px; }
     .feed__photo img {
-      max-width: 180px; }
+      max-width: 150px; }
   .feed__body {
     padding-bottom: 10px; }
   .feed__title {
@@ -9812,6 +9812,50 @@ a.button {
 .search__user {
   border-bottom: 2px solid #efbe17;
   margin-bottom: 15px; }
+
+.add__title[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border-bottom: 2px solid #efbe17; }
+
+.add__content {
+  width: 100%;
+  padding: 10px; }
+
+.add__org {
+  background: #efbe17;
+  padding: 10px;
+  margin: 10px auto; }
+
+.add__orgselect {
+  background: transparent;
+  border: 0;
+  width: 100%; }
+
+.add__photozone {
+  margin: 30px auto;
+  width: 200px;
+  border: 1px solid #efbe17;
+  border-radius: 5px; }
+
+.add__photo {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 5px; }
+
+.add__addphoto {
+  color: #efbe17;
+  width: 100%;
+  height: 100px;
+  background: #fff;
+  border-bottom: 1px solid #efbe17;
+  border-radius: 0; }
+  .add__addphoto:first-child {
+    margin-top: 5px; }
+  .add__addphoto:last-child {
+    border: 0;
+    margin-bottom: 5px; }
 
 .profile__top {
   padding: 15px;

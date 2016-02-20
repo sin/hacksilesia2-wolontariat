@@ -15,7 +15,19 @@ angular.module('starter.controllers', [])
     });
   })
 
-  .controller('AddCtrl', function ($scope, $cordovaCamera) {
+  .controller('AddCtrl', function ($scope, $cordovaCamera, Organizations, Users, Posts) {
+    $scope.$on('$ionicView.enter', function (e) {
+      $scope.post = {
+        location: "Katowice",
+        date: new Date(),
+        user: 1
+      };
+      $scope.user = Users.get({id: 1});
+      $scope.organisations = Organizations.query();
+      $scope.save = function () {
+          Posts.save($scope.post);
+      };
+    });
     $scope.takeImage = function () {
       var options = {
         quality: 80,
