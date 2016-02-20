@@ -1,6 +1,6 @@
 angular.module('starter.services', ['ngResource'])
 
-  .factory('Organizations', function () {
+  .factory('Organizations', function ($resource) {
     return $resource('http://192.168.1.118:8000/organisation/:id')
   })
 
