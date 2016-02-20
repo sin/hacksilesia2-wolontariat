@@ -91,3 +91,42 @@
     margin-bottom: 15px;
   }
 }
+
+.tab-item .icon:before {
+  content: "";
+  width: 48px;
+  height: 48px;
+
+}
+
+.tab-item .ion-person-stalker:before {
+  background: url('../img/menu_white_03.png');
+}
+
+.tab-item-active .ion-person-stalker:before {
+  background: url('../img/menu_orange_03.png');
+}
+
+.tab-item .ion-ios-camera:before {
+  background: url('../img/menu_white_05.png');
+}
+
+.tab-item-active .ion-ios-camera:before {
+  background: url('../img/menu_orange_05.png');
+}
+
+.tab-item .ion-search:before {
+  background: url('../img/menu_white_07.png');
+}
+
+.tab-item-active .ion-search:before {
+  background: url('../img/menu_orange_07.png');
+}
+
+.tab-item .ion-person:before {
+  background: url('../img/menu_white_09.png');
+}
+
+.tab-item-active .ion-person:before {
+  background: url('../img/menu_orange_09.png');
+}
