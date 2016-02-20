@@ -28,9 +28,9 @@ angular.module('starter.controllers', [])
     }
   })
 
-  .controller('OrganizationsCtrl', function ($scope, Organizations) {
+  .controller('SearchCtrl', function ($scope, Users) {
     $scope.$on('$ionicView.enter', function (e) {
-      $scope.organizations = Organizations.query();
+      $scope.users = Users.query();
     });
   })
 

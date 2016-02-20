@@ -1,34 +1,38 @@
+.tabs-striped.tabs-energized .tabs {
+  background: #efbe17 url('../img/bar_top.jpg');
+}
+
+.header {
+  position: relative;
+  height: 48px;
+  margin-bottom: 10px;
+
+  &__userphoto {
+    position: absolute;
+    left: 5px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+  }
+
+  &__username {
+    position: absolute;
+    display: block;
+    line-height: 42px;
+    top: 0;
+    margin: 0;
+    left: 60px;
+    font-size: 16px;
+    font-family: serif;
+  }
+}
+
 .feed {
   padding: 20px;
 
   &__post {
     position: relative;
     padding-bottom: 10px;
-  }
-
-  &__header {
-    position: relative;
-    height: 48px;
-    margin-bottom: 10px;
-    width: 50%;
-  }
-
-  &__userphoto {
-    position: absolute;
-    left: 5px;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-  }
-
-  &__username {
-    position: absolute;
-    line-height: 48px;
-    top: 0;
-    margin: 0;
-    left: 64px;
-    font-size: 16px;
-    font-family: serif;
   }
 
   &__photo {
@@ -64,5 +68,26 @@
   &__org {
     font-family: serif;
     font-size: 16px;
+  }
+}
+
+.search {
+
+  &__header {
+    padding: 15px 12px;
+    background: #efbe17 url('../img/bar_bottom.jpg');
+  }
+
+  &__label {
+    padding: 0 10px 0 5px;
+  }
+
+  &__list {
+    padding: 15px;
+  }
+
+  &__user {
+    border-bottom: 2px solid #efbe17;
+    margin-bottom: 15px;
   }
 }

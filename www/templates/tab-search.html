@@ -1,11 +1,18 @@
 <ion-view view-title="Szukaj wolontariatu" hide-nav-bar="true">
   <ion-content>
-    <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="organization in organizations" type="item-text-wrap" href="#/tab/search/{{organization.id}}">
-        <img ng-src="{{organization.logo}}">
-        <h2>{{organization.name}}</h2>
-        <p>{{organization.about}}</p>
-      </ion-item>
-    </ion-list>
+    <div class="search__header">
+      <label class="item item-input search__label">
+        <input type="text" placeholder="Szukaj osób">
+        <i class="icon ion-search placeholder-icon"></i>
+      </label>
+    </div>
+    <div class="search__list">
+      <div class="search__user" ng-repeat="user in users">
+        <div class="header">
+          <img class="header__userphoto" ng-src="{{user.photo}}">
+          <h2 class="header__username">{{user.name}} {{user.surname}}</h2>
+        </div>
+      </div>
+    </div>
   </ion-content>
 </ion-view>

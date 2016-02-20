@@ -67,7 +67,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         views: {
           'tab-search': {
             templateUrl: 'templates/tab-search.html',
-            controller: 'OrganizationsCtrl'
+            controller: 'SearchCtrl'
           }
         }
       })

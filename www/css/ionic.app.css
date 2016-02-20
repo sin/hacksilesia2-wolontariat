@@ -9731,30 +9731,34 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+.tabs-striped.tabs-energized .tabs {
+  background: #efbe17 url("../img/bar_top.jpg"); }
+
+.header {
+  position: relative;
+  height: 48px;
+  margin-bottom: 10px; }
+  .header__userphoto {
+    position: absolute;
+    left: 5px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%; }
+  .header__username {
+    position: absolute;
+    display: block;
+    line-height: 42px;
+    top: 0;
+    margin: 0;
+    left: 60px;
+    font-size: 16px;
+    font-family: serif; }
+
 .feed {
   padding: 20px; }
   .feed__post {
     position: relative;
     padding-bottom: 10px; }
-  .feed__header {
-    position: relative;
-    height: 48px;
-    margin-bottom: 10px;
-    width: 50%; }
-  .feed__userphoto {
-    position: absolute;
-    left: 5px;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%; }
-  .feed__username {
-    position: absolute;
-    line-height: 48px;
-    top: 0;
-    margin: 0;
-    left: 64px;
-    font-size: 16px;
-    font-family: serif; }
   .feed__photo {
     width: 50%;
     position: absolute;
@@ -9778,3 +9782,17 @@ a.button {
   .feed__org {
     font-family: serif;
     font-size: 16px; }
+
+.search__header {
+  padding: 15px 12px;
+  background: #efbe17 url("../img/bar_bottom.jpg"); }
+
+.search__label {
+  padding: 0 10px 0 5px; }
+
+.search__list {
+  padding: 15px; }
+
+.search__user {
+  border-bottom: 2px solid #efbe17;
+  margin-bottom: 15px; }
