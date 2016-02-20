@@ -1,8 +1,10 @@
 angular.module('starter.controllers', [])
 
-  .controller('FeedCtrl', function ($scope, Posts) {
+  .controller('FeedCtrl', function ($scope, Posts, Users, Organizations) {
     $scope.$on('$ionicView.enter', function (e) {
       $scope.posts = Posts.query();
+      $scope.users = Users.query();
+      $scope.orgs = Organizations.query();
     });
   })
 
