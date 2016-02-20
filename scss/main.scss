@@ -4,8 +4,8 @@
 
 .header {
   position: relative;
-  height: 48px;
   margin-bottom: 10px;
+  min-height: 45px;
 
   &__userphoto {
     position: absolute;
@@ -16,12 +16,11 @@
   }
 
   &__username {
-    position: absolute;
     display: block;
-    line-height: 42px;
-    top: 0;
-    margin: 0;
-    left: 60px;
+    line-height: 16px;
+    margin-left: 60px;
+    margin-top: 0;
+    padding-top: 15px;
     font-size: 16px;
     font-family: serif;
   }
@@ -49,20 +48,17 @@
 .feed {
   padding: 20px;
 
-  &__post {
-    position: relative;
-    padding-bottom: 10px;
-  }
-
   &__photo {
-    width: 50%;
-    position: absolute;
-    top: 0;
-    right: 0;
+    float: right;
+    width: 180px;
 
     img {
-      width: 100%;
+      max-width: 180px;
     }
+  }
+
+  &__body {
+    padding-bottom: 10px;
   }
 
   &__title {
@@ -75,18 +71,26 @@
   &__about {
     font-family: serif;
     padding: 0;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 
   &__footer {
-    padding: 5px 8px;
+    padding: 2px 8px;
     background: #efbe17;
-    height: 50px;
   }
 
   &__org {
+    float: left;
     font-family: serif;
     font-size: 16px;
+    line-height: 28px;
+    width: 70%;
+    margin: 0;
+  }
+
+  &__cat {
+    float: right;
+    width: 26px;
   }
 }
 
@@ -112,6 +116,7 @@
 
 .profile {
   &__top {
+    padding: 15px;
     background: url('../img/profile_bg.png');
   }
 

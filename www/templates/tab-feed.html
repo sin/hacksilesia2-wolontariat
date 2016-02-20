@@ -2,19 +2,20 @@
   <ion-content>
     <div class="feed">
       <div class="feed__post" ng-repeat="post in posts">
-        <div class="feed__photo clearfix">
-          <img ng-src="{{post.image}}">
-        </div>
         <div class="feed__body clearfix">
+          <div class="feed__photo">
+            <img ng-src="{{post.image}}" style="">
+          </div>
           <div class="header">
-            <img class="header__userphoto" ng-src="{{users[post.user].avatar || 'img/adam.jpg'}}">
-            <h2 class="header__username">{{users[post.user].first_name}} {{users[post.user].last_name}}</h2>
+            <img class="header__userphoto" ng-src="{{post.user.avatar || 'img/adam.jpg'}}">
+            <h2 class="header__username">{{post.user.first_name}} {{post.user.last_name}}</h2>
           </div>
           <h2 class="feed__title">{{post.title}}</h2>
           <p class="feed__about">{{post.content}}</p>
-        </div>
-        <div class="feed__footer">
-          <h2 class="feed__org">{{orgs[post.organisation].name}}</h2>
+          <div class="feed__footer clearfix">
+            <h2 class="feed__org">{{post.organisation.name}}</h2>
+            <img class="feed__cat" ng-src="{{post.organisation.category.icon2}}">
+          </div>
         </div>
       </div>
     </div>

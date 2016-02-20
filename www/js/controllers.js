@@ -1,15 +1,22 @@
 angular.module('starter.controllers', [])
 
-  .controller('FeedCtrl', function ($scope, Posts, Users, Organizations) {
+  .controller('FeedCtrl', function ($scope, Posts, Users, Organizations, Categories) {
     $scope.$on('$ionicView.enter', function (e) {
       $scope.posts = Posts.query();
-      $scope.users = Users.query();
-      $scope.orgs = Organizations.query();
+      $scope.posts.$promise.then(function (res) {
+        angular.forEach(res, function (value) {
+          value.user = Users.get({id: value.user});
+          value.organisation = Organizations.get({id: value.organisation});
+          value.organisation.$promise.then(function () {
+            value.organisation.category = Categories.get({id: value.organisation.category});
+          });
+        })
+      });
     });
   })
 
   .controller('AddCtrl', function ($scope, $cordovaCamera) {
-    $scope.takeImage = function() {
+    $scope.takeImage = function () {
       var options = {
         quality: 80,
         destinationType: Camera.DestinationType.DATA_URL,
@@ -22,9 +29,9 @@ angular.module('starter.controllers', [])
         saveToPhotoAlbum: false
       };
 
-      $cordovaCamera.getPicture(options).then(function(imageData) {
+      $cordovaCamera.getPicture(options).then(function (imageData) {
         $scope.srcImage = "data:image/jpeg;base64," + imageData;
-      }, function(err) {
+      }, function (err) {
         // error
       });
     }
