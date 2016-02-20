@@ -1,9 +1,10 @@
-<ion-view view-title="Profile">
+<ion-view view-title="Profil" hide-nav-bar="true">
   <ion-content>
     <ion-list>
-    <ion-toggle  ng-model="settings.enableFriends">
-        Enable Friends
-    </ion-toggle>
+      <img ng-src="{{user.photo}}" width="64" height="64">
+      <h2>{{user.name}} {{user.surname}}</h2>
+      <p>{{user.about}}</p>
+      <p>Email: <a href="mailto:{{user.email}}">{{user.email}}</a></p>
     </ion-list>
   </ion-content>
 </ion-view>

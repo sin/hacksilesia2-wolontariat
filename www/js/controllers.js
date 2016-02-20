@@ -1,32 +1,22 @@
 angular.module('starter.controllers', [])
 
-  .controller('FeedCtrl', function ($scope) {
+  .controller('FeedCtrl', function ($scope, Posts) {
+    $scope.$on('$ionicView.enter', function (e) {
+      $scope.posts = Posts.query();
+    });
   })
 
   .controller('AddCtrl', function ($scope) {
   })
 
-  .controller('SearchCtrl', function ($scope, Searches) {
-    // With the new view caching in Ionic, Controllers are only called
-    // when they are recreated or on app start, instead of every page change.
-    // To listen for when this page is active (for example, to refresh data),
-    // listen for the $ionicView.enter event:
-    //
-    //$scope.$on('$ionicView.enter', function(e) {
-    //});
-
-    $scope.searches = Searches.all();
-
+  .controller('OrganizationsCtrl', function ($scope, Organizations) {
+    $scope.$on('$ionicView.enter', function (e) {
+      $scope.organizations = Organizations.query();
+    });
   })
-
-  .controller('SearchDetailCtrl', function ($scope, $stateParams, Searches) {
-    $scope.search = Searches.get($stateParams.searchId);
-  })
-
 
   .controller('ProfileCtrl', function ($scope, Users) {
-    $scope.user = Users.get(1);
-    $scope.settings = {
-      enableFriends: true
-    };
+    $scope.$on('$ionicView.enter', function (e) {
+      $scope.user = Users.get(0);
+    });
   });
