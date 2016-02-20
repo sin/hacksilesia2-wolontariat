@@ -39,7 +39,8 @@
   }
 
   .header__username {
-    line-height: 110px;
+    top: 40px;
+    line-height: 30px;
     left: 110px;
     font-size: 28px;
   }
@@ -112,6 +113,26 @@
 .profile {
   &__top {
     background: url('../img/profile_bg.png');
+  }
+
+  &__badges {
+
+  }
+
+  &__badge {
+    float: left;
+    width: 33%;
+    text-align: center;
+
+    img {
+      max-width: 90%;
+    }
+
+    p {
+      text-transform: uppercase;
+      color: #fff;
+      font-weight: 800;
+    }
   }
 }
 

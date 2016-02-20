@@ -9763,7 +9763,8 @@ a.button {
     width: 96px;
     margin-bottom: 15px; }
   .header--alt .header__username {
-    line-height: 110px;
+    top: 40px;
+    line-height: 30px;
     left: 110px;
     font-size: 28px; }
 
@@ -9812,6 +9813,17 @@ a.button {
 
 .profile__top {
   background: url("../img/profile_bg.png"); }
+
+.profile__badge {
+  float: left;
+  width: 33%;
+  text-align: center; }
+  .profile__badge img {
+    max-width: 90%; }
+  .profile__badge p {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 800; }
 
 .tab-item .icon:before {
   content: "";

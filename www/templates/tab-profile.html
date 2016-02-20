@@ -6,7 +6,20 @@
           <img class="header__userphoto" ng-src="{{user.avatar}}" width="64" height="64">
           <h2 class="header__username">{{user.first_name}} {{user.last_name}}</h2>
         </div>
-        <p>{{user.about}}</p>
+        <div class="profile__badges clearfix">
+          <div class="profile__badge">
+            <img ng-src="img/odznaki_03.png">
+            <p>Badge</p>
+          </div>
+          <div class="profile__badge">
+            <img ng-src="img/odznaki_05.png">
+            <p>Badge</p>
+          </div>
+          <div class="profile__badge">
+            <img ng-src="img/odznaki_07.png">
+            <p>Badge</p>
+          </div>
+        </div>
       </div>
     </ion-list>
   </ion-content>
